@@ -1,0 +1,144 @@
+// Generelle stilarter
+.formContainer {
+    max-width: 380px;
+    margin: auto;
+    padding: 20px;
+}
+
+// Styling for login og signup forms
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input {
+        width: 100%;
+        padding: 7px;
+        padding-right: 40px;
+        border: 1px solid #4caf50;
+        border-radius: 0;
+        background: #f8f8f8;
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .form-group {
+        position: relative;
+    }
+
+    .inputWrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .inputIcon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #777;
+        font-size: 18px;
+    }
+
+
+}
+
+.submitButton {
+    background: #137c30;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 0;
+
+    &:hover {
+        background: #0e5f24;
+    }
+}
+
+
+
+.formTitle {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+
+
+.textCenter {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+
+    .link {
+        color: #137c30;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #137c30;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.textCenter {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.greenLink {
+    color: #137c30 !important;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Responsiv styling
+@media (max-width: 768px) {
+    .formContainer {
+        max-width: 90%;
+    }
+
+    input {
+        font-size: 14px;
+    }
+}

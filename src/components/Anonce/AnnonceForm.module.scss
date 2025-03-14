@@ -1,0 +1,188 @@
+
+@use '../../styles/Global.scss' as *;
+.annonceForm {
+    max-width: 976px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: $text;
+
+    h1 {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .subtext {
+        font-size: 14px;
+        color: $black;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        text-align: left;
+
+        label {
+            font-size: 16px;
+            font-weight: 400;
+            display: block;
+            margin-top: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #1d84398d;
+            font-size: 14px;
+            font-family: $primary;
+            background-color: #e3e3e360;
+
+            &:focus {
+                outline: none;
+                border-color: $secondary;
+                box-shadow: 0 0 5px rgba(0, 166, 118, 0.5);
+            }
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: none;
+        }
+
+        .selectContainer {
+            position: relative;
+            width: 100%;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #1d84398d;
+            font-size: 14px;
+            font-family: $text;
+            background-color: #e3e3e360;
+            border-radius: 5px;
+            appearance: none;
+            cursor: pointer;
+            padding-right: 40px;
+        }
+
+        .selectContainer::after {
+            content: "▼";
+            font-size: 16px;
+            color: $black;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .buttonContainer {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 15px;
+        }
+
+        button {
+            background-color: $secondary;
+            color: $white;
+            border: none;
+            padding: 8px 30px;
+            font-size: 16px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: $primary;
+            }
+
+            &:disabled {
+                background-color: $light;
+                cursor: not-allowed;
+            }
+        }
+
+        .message {
+            font-size: 14px;
+            color: $secondary;
+            font-weight: 700;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .annoncePage {
+        max-width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .subtext {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .form {
+        gap: 8px;
+
+        label {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 8px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        textarea {
+            min-height: 70px;
+        }
+
+        .selectContainer::after {
+            font-size: 14px;
+            right: 10px;
+            color: $black;
+        }
+
+        .buttonContainer {
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+
+        button {
+            width: auto;
+            padding: 6px 16px;
+            font-size: 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            background-color: $primary;
+            transition: background 0.3s ease-in-out;
+
+            &:hover {
+                background-color: $primary;
+            }
+
+            &:disabled {
+                background-color: $light;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

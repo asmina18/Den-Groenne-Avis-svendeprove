@@ -1,0 +1,198 @@
+@use '../../styles/Global.scss' as *;
+
+.donationer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 10px;
+    position: relative;
+
+    // Grøn linje på toppen
+    .line {
+        width: 100%;
+        height: 3px;
+        background-color: $secondary;
+        margin-bottom: 10px;
+    }
+
+    .boxContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .box {
+        position: relative;
+        width: 45%;
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        margin-bottom: 20px;
+
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(1.40);
+            z-index: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }
+
+        .textContent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            width: 80%;
+            text-align: start;
+            color: white !important;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        h2 {
+            font-size: 22px;
+            color: $white;
+            margin-bottom: 5px;
+        }
+
+        h5 {
+            font-size: 16px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+            color: $secondary;
+            font-weight: 400;
+            margin: 5px 0;
+        }
+
+        p:nth-of-type(2) {
+            font-size: 10px;
+            color: $white;
+            text-align: start;
+            font-weight: 300;
+        }
+
+
+    }
+
+    /* 📱 Tablet (max-width: 1024px) */
+    @media (max-width: 1024px) {
+        .boxContainer {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .box {
+            width: 90%;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        .textContent {
+            width: 90%;
+            padding: 15px;
+        }
+    }
+
+    /* 📱 Mobil (max-width: 768px) */
+    @media (max-width: 768px) {
+        .box {
+            width: 100%;
+            height: 220px;
+            margin-bottom: 30px;
+        }
+
+        .boxContainer {
+            gap: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .textContent {
+            width: 90%;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        h5 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    /* 📱 Små mobiler (max-width: 480px) */
+    @media (max-width: 480px) {
+        .box {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+
+        .boxContainer {
+            gap: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .textContent {
+            width: 95%;
+            padding: 8px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        h5 {
+            font-size: 13px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}

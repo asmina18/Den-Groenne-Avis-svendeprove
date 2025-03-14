@@ -1,0 +1,30 @@
+.messageForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.inputContainer {
+    position: relative;
+}
+
+textarea {
+
+    border: none;
+    resize: none;
+    background-color: transparent;
+}
+.sendButton {
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    // border-radius: 0;
+    border: none;
+
+    background-color: #007b3e;
+
+    @media (max-width: 768px) {
+        position: static;
+        display: block;
+        margin: 10px auto 0;
+    }
+}

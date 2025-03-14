@@ -1,0 +1,111 @@
+@use '../../styles/Global.scss' as *;
+
+.card {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+        transform:scale(1.05);
+        transition:transform 0.3s ease-in-out;
+    }
+
+    img {
+        width:100%;
+        height:150px;
+        object-fit:cover;
+        display:block;
+        transition: height 0.3s ease-in-out;
+    }
+
+
+        .overlay {
+        position: absolute;
+        overflow: hidden;
+        bottom:0;
+        left:0;
+        width:100%;
+        height:50px;
+        background:$primary;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        opacity:0;
+        transition:opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform:translateY(100%);
+    }
+
+    h4,p {
+        margin:0;
+        font-family:$text;
+        color:$white;
+        font-size: 1rem;
+        font-weight: 200;
+    }
+
+    &:hover .overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- 📱 RESPONSIV DESIGN --- */
+
+// TABLET
+@media (max-width: 1024px) {
+    .card {
+        max-width: 220px;
+    }
+
+    img {
+        height: 130px;
+    }
+
+    h4, p {
+        font-size: 0.9rem;
+    }
+
+    .overlay {
+        height: 45px;
+    }
+}
+
+// MOBIL
+@media (max-width: 768px) {
+    .card {
+        max-width: 180px;
+    }
+
+    img {
+        height: 110px;
+    }
+
+    h4, p {
+        font-size: 0.8rem;
+    }
+
+    .overlay {
+        height: 40px;
+    }
+}
+
+// MEGET SMÅ SKÆRME
+@media (max-width: 480px) {
+    .card {
+        max-width: 100%;
+    }
+
+    img {
+        height: 100px;
+    }
+
+    .overlay {
+        height: 35px;
+    }
+
+    h4, p {
+        font-size: 0.75rem;
+    }
+}

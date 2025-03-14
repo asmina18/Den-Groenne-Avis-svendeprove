@@ -1,0 +1,65 @@
+@use '../../styles/Global.scss' as *;
+
+.aside {
+    padding: 10px 15px;
+    font-family: $text;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #1e1e1e;
+}
+/*  Links */
+.categoryLink {
+    font-size: 1rem;
+    font-weight: 200;
+    color: $black;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+        color: $primary;
+        font-weight: bold;
+        // font-weight: 200;
+
+    }
+}
+
+/*  MOBIL-VERSION h */
+@media (max-width: 768px) {
+    .aside {
+        padding: 8px;
+        border-left: none;
+        border-top: 2px solid #007b3e;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap:2px;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .categoryItem {
+        flex: 1 1 calc(33% - 30px);
+        max-width: 30%;
+        text-align: center;
+        border-left: none;
+    }
+
+    .categoryLink {
+        display: block;
+        font-size: 0.9rem;
+        padding: 8px;
+        border-radius: 5px;
+        text-align: center;
+    }
+}

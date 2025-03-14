@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+//  Farver
+$primary: #00A676;
+$secondary: #1D8439;
+$danger: #952E0D;
+$light: #F5F5F5;
+$white: #FFFFFF;
+$black: #000000;
+
+// Call to Action farve
+$callToAction: #00A676;
+
+// Baggrundsfarve
+$bg: $light;
+
+// 🖋 Fonts
+$headline: 'Roboto', sans-serif;
+$text: 'Roboto', sans-serif;
+
+// 🔠 Font størrelser (Brug `rem` for bedre skalering)
+$font-size-base: 1rem;   // 16px
+$font-size-sm: 0.875rem;  // 14px
+$font-size-md: 1.125rem;  // 18px
+$font-size-lg: 1.5rem;    // 24px
+$font-size-xl: 2rem;      // 32px
+$font-size-xxl: 2.5rem;   // 40px;
+
+// 🖼 Global styling
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $text;
+    font-size: $font-size-base;
+    background-color: $bg;
+    color: $black;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    h1, h2, h3, h4, p {
+        font-family: $text;
+        color: $black;
+    }
+
+    #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+}
+
+// 🎯 Bootstrap Fixes & Custom Styles
+button,
+input,
+select {
+    border-radius: 0; // Fjerner afrunding
+}

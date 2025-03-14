@@ -1,0 +1,110 @@
+.kategoriPage {
+    margin-top: 20px;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* 📌 Sidebar styling */
+    aside {
+        padding-right: 20px;
+    }
+
+    /* 📌 Grid-layout til produkter */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    /* 📌 Produktkort */
+    .productCard {
+        overflow: hidden;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        padding-bottom: 10px;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    /* 📌 Billede med pris-overlay */
+
+   .imageWrapper {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 📌 Pris-overlay (kun hover på prisen) */
+        .priceTag {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 123, 62, 0.9);
+            color: white;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            text-align: left;
+            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+            transform: translateY(100%);
+        }
+
+        &:hover .priceTag {
+            transform: translateY(0);
+        }
+    }
+
+    /* 📌 Produktnavn */
+    .productName {
+        padding: 10px;
+        color: #333;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* 📌 Beskrivelse */
+    .productDescription {
+        // padding: 0 10px 10px;
+        font-size: 0.9rem;
+        color: #666;
+        text-align: center;
+    }
+}
+
+/* 🌟 RESPONSIVT DESIGN */
+@media (max-width: 768px) {
+    .kategoriPage {
+
+        .grid {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .productCard {
+            box-shadow: none;
+        }
+        // .imageWrapper{
+        //     width: ;
+        // }
+    }
+}

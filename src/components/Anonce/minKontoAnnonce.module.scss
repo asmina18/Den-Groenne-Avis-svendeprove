@@ -1,0 +1,79 @@
+// Hurtig styling. Vender tilbage for at tilpasse styling, som kræves af designet.
+
+.mineAnnoncer {
+    .titel {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .liste {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // 🔹 Dynamisk grid
+        gap: 1.5rem;
+        padding: 1rem;
+        max-width: 1200px;
+        margin: auto; // 🔹 Centrerer layoutet
+    }
+
+    .annonce {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.02); // 🔹 Let animation ved hover
+        }
+    }
+
+    .navn {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .beskrivelse {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+
+    .pris {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .billede {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-bottom: 0.5rem;
+    }
+
+    .knapper {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .sletKnap {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+
+        &:hover {
+            background-color: darkred;
+        }
+    }
+}

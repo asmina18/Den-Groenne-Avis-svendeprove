@@ -1,0 +1,95 @@
+@use '../../styles/Global.scss' as *;
+
+.detailsContainer{
+
+    display: grid;
+    grid-template-columns: 20% 1fr;
+}
+.detailsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    text-align: start;
+    font-size: 2rem;
+    font-family: $headline;
+    color: $black;
+    margin-bottom: 15px;
+}
+
+.image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $black;
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $black;
+    text-align: center;
+}
+
+.backButton {
+    background-color: $primary;
+    color:$white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    &:hover {
+        background-color:$secondary;
+    }
+}
+
+/* 📱 RESPONSIV DESIGN */
+@media (max-width: 768px) {
+    .detailsContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+
+
+    }
+    .detailsPage {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 1.3rem;
+    }
+
+    .backButton {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        width: 120px;
+    }
+}
+

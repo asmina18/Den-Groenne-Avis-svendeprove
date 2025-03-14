@@ -1,0 +1,115 @@
+@use '../../styles/Global.scss' as *;
+
+.nav {
+  background-color: $white;
+  padding: 15px 0;
+  font-family: $text;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Контейнер для навигации */
+.navContainer {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Логотип (отправляем влево) */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  border: 2px solid #007b3e;
+  margin-right: auto;
+}
+
+.green {
+  background-color: #007b3e;
+  color: white;
+  padding: 8px 12px;
+}
+
+.border {
+  color: #007b3e;
+  background-color: white;
+  padding: 8px 12px;
+  border-left: 2px solid #007b3e;
+}
+
+/* Навигация справа */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Dropdown */
+.categorySelect {
+  width: 220px;
+  border: 2px solid #007b3e;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: white;
+  &:focus {
+    outline: none;
+    border-color: #005a2b;
+  }
+}
+
+/* Кнопка */
+.createAdBtn {
+  background-color: #007b3e;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: #005a2b;
+  }
+}
+
+
+.logoutButton {
+  background: none;
+  border: none;
+  color: gray;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &:hover {
+    color: #000;
+  }
+
+
+}
+
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.icon {
+  font-size: 10px;
+  color: gray;
+  cursor: pointer;
+  &:hover {
+    color: #000;
+  }
+}
+
+
+
